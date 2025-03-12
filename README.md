@@ -1,5 +1,99 @@
 # Agent based Complaints Solutioning Application using Langgraph
 
+----
+----
+## 🚀 Cart 2.0 - Complete Setup & Execution Guide  
+
+This guide provides step-by-step instructions to install, configure, and run **Cart 2.0** for first-time users.
+
+---
+
+## **1️⃣ Pre-requisites**  
+
+Before running **Cart 2.0**, ensure you have the following installed:  
+
+✅ **Python 3.9+** (Check using `python --version`)  
+✅ **Git** (Required for cloning the repository)  
+✅ **Groq API Key** → Required for Llama 3 processing ([Sign up here](https://groq.com/))  
+✅ **Tavily API Key** → Required for web-based search ([Get API key](https://tavily.com/))  
+✅ **Hugging Face API Key** → Required for embedding models ([Get API key](https://huggingface.co/settings/tokens))  
+✅ **Microsoft SQL Server** → Required for complaint storage  
+✅ **ODBC Driver for SQL Server** → Download **[ODBC Driver 17](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver15)**  
+
+---
+
+## **2️⃣ Clone the Repository**  
+
+Open a **terminal (Mac/Linux) or command prompt (Windows)** and run:  
+
+```bash
+git clone https://github.com/your-repo/cart-2.0.git
+cd cart-2.0
+
+##  **3️⃣ Create a Virtual Environment**
+For Windows
+python -m venv cart_env
+cart_env\Scripts\activate
+
+For Mac/Linux
+source cart_env/bin/activate
+
+## **4️⃣ Install Dependencies**
+Run the following command to install all required packages:
+pip install -r requirements.txt
+
+## **5️⃣ Set Up API Keys in .env**
+1. Create a .env file in the cart-2.0 folder:
+2. Open the .env file and add the following:
+**   GROQ_API_KEY=your_groq_api_key_here
+   TAVILY_API_KEY=your_tavily_api_key_here
+   HUGGINGFACE_API_KEY=your_huggingface_api_key_here
+   EMPLOYEE_ID=your_employee_id**
+
+## **6️⃣ Configure SQL Server Connection**
+Cart 2.0 uses Microsoft SQL Server to store complaints.
+Ensure that:
+
+SQL Server is running
+Your connection credentials are correct
+
+`server = 'YOUR-SQL-SERVER-NAME'  # Example: 'localhost\SQLEXPRESS'`
+`database = 'Cart2.0'`
+`driver = '{ODBC Driver 17 for SQL Server}'`
+`conn = pyodbc.connect(f'DRIVER={driver};SERVER={server};DATABASE={database};Trusted_Connection=yes;')`
+
+## **7️⃣ Run Cart 2.0 from CLI**
+Set Argument Values Before Running
+Before executing Cart 2.0, ensure you define the necessary arguments like company name, date range, and total complaints to fetch.
+
+Open CART.py and update the following values inside the run_cart() function:
+
+`company = 'JPMORGAN CHASE & CO.'`
+`total_records = 10`
+`date_received_min = "2024-01-01"`
+`date_received_max = "2024-03-31"`
+`llm_model = 'llama3-70b-8192'`
+
+After setting the values, run the tool from the terminal:
+`python CART.py`
+
+## **8️⃣ Run the Streamlit Web UI**
+Cart 2.0 includes a Streamlit-based UI.
+To start the web interface, run:
+`streamlit run Cart_App.py`
+
+🎯 Summary
+✅ **Clone the repo**
+✅ **Install dependencies (pip install -r requirements.txt)**
+✅ **Set up API keys in .env**
+✅ **Configure SQL Server connection**
+✅ **Set arguments before running CART.py**
+✅ **Run python CART.py to process complaints**
+✅ **Use streamlit run Cart_App.py for UI**
+
+----
+----
+
 ## Cart 2.0 - Workflows & Class Summary
 
 ### 1️⃣ Complaint Workflow Files & Class Summary
