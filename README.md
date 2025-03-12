@@ -13,7 +13,7 @@ The **Complaint Workflow** inside the `src/complaint_workflow/` folder handles t
 | `fetch_complaints_api.py`         | `fetch_compalints_class`            | Fetches complaints from CFPB API and loads them into SQL DB. |
 | `complaint_summarization.py`      | `complaint_summarization_chain_class` | Summarizes long complaints before processing. |
 | `document_grading.py`             | `document_grading_class`             | Grades retrieved regulatory documents for relevance. |
-| `complaint_classification.py`     | `complaint_clasification_class`     | Classifies complaints as Reg AA-related or not (Document-based & Web-based). |
+| `complaint_classification.py`     | `complaint_clasification_class`     | Classifies complaints with a CFPB regulation (Document-based & Web-based). |
 | `complaint_solution.py`           | `solution_extraction_class`         | Generates structured solutions for complaints (Document-based & Web-based). |
 | `solution_grading.py`             | `solution_grading_class`             | Grades the generated solutions for accuracy and completeness. |
 | `complaint_stategraph.py`         | `complaint_stategraph_class`         | LangGraph-based state machine for complaint workflow execution. |
