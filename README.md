@@ -164,13 +164,13 @@ The **Core Components** handle **database management, logging, regulation ingest
 ✅ **Centralized logging to track execution flow**  
 
 ---
+---
 
 
 ## 🚀 Cart 2.0 - Infrastructure Overview
 
 Cart 2.0 is built using a **modular architecture** integrating various **AI, database, and vector storage technologies** to process consumer complaints efficiently.
 
----
 
 ### **1️⃣ Core Infrastructure Components**
 
@@ -242,6 +242,5 @@ Cart 2.0 is built using a **modular architecture** integrating various **AI, dat
 
 ---
 
-This documentation provides **a structured overview** of the **Cart 2.0 infrastructure**. 🚀 You can **copy and paste this into your GitHub `README.md`** for easy reference!  
 
 
