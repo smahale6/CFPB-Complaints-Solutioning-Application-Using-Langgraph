@@ -47,7 +47,7 @@ The **Core Components** provide **database management, logging, regulation inges
 | `regulation_text_ingestion.py` | `regulation_ingestion_class`   | Loads and vectorizes regulation PDFs into ChromaDB for retrieval. |
 
 
-##🚀 Cart 2.0 - Execution Flow Summary
+## 🚀 Cart 2.0 - Execution Flow Summary
 
 This section provides an overview of how **Cart 2.0** processes complaints and formulates responses using a structured workflow.
 
