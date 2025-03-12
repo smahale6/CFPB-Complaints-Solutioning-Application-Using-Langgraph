@@ -173,5 +173,88 @@ The **Core Components** handle **database management, logging, regulation ingest
 ---
 
 
+## 🚀 Cart 2.0 - Infrastructure Overview
+
+Cart 2.0 is built using a **modular architecture** integrating various **AI, database, and vector storage technologies** to process consumer complaints efficiently.
+
+---
+
+### **1️⃣ Core Infrastructure Components**
+
+| **Component**            | **Technology Used**            | **Description** |
+|--------------------------|--------------------------------|----------------|
+| **Programming Language** | Python 3.9                    | Used for all scripting and AI processing. |
+| **Frameworks**          | LangChain, LangGraph          | Used for AI workflows, complaint classification, and email automation. |
+| **Database**            | SQL Server (MSSQL)            | Stores **complaints, classified results, emails, and logs**. |
+| **Vector Database**      | ChromaDB                      | Stores **vectorized regulatory documents** for retrieval. |
+| **Embeddings Model**     | `BAAI/bge-large-en-v1.5`      | Used for generating embeddings for regulation documents. |
+| **Large Language Model** | `Llama 3` (via Groq API)      | Used for **complaint classification, solution extraction, and email formulation**. |
+| **Search Engine**        | Tavily Search API             | Fetches real-time web information when **regulatory documents are not relevant**. |
+| **Cloud Environment**    | Local + Cloud (Azure)         | SQL Server is **cloud-hosted**; some components run locally. |
+
+---
+
+### **2️⃣ Database & Storage Components**
+
+| **Storage Type**           | **Technology Used** | **Description** |
+|----------------------------|--------------------|----------------|
+| **SQL Database**           | Microsoft SQL Server | Stores **raw and processed complaint data, logs, email responses, and regulatory mappings**. |
+| **Vector Store**           | ChromaDB | Stores **embedded regulatory documents for fast retrieval**. |
+| **Document Storage**       | Local/Cloud File System | Stores **PDFs of regulations before ingestion into ChromaDB**. |
+| **Logs Storage**           | Local Log Files (`logs/`) | Stores **execution logs for debugging and monitoring**. |
+
+---
+
+### **3️⃣ Machine Learning & AI Components**
+
+| **Component**                 | **Technology Used**              | **Description** |
+|--------------------------------|--------------------------------|----------------|
+| **Text Embeddings**            | `BAAI/bge-large-en-v1.5` (HuggingFace) | Converts text into vector embeddings for **regulatory document retrieval**. |
+| **LLM for Text Processing**    | `Llama 3.2 3B (Preview) 8k` via Groq API | Processes complaints, generates responses, and classifies issues. |
+| **LangChain Pipelines**        | LangChain + LangGraph          | Automates workflows for **classification, grading, and email formulation**. |
+
+---
+
+### **4️⃣ Workflow & Automation**
+
+| **Workflow Type**              | **Technology Used**          | **Description** |
+|--------------------------------|------------------------------|----------------|
+| **Complaint Processing Workflow** | LangGraph (State Machines) | Automates complaint classification, retrieval, and solution extraction. |
+| **Email Processing Workflow**  | LangGraph + Streamlit        | Automates **email generation, grading, and refinement**. |
+| **Regulation Ingestion**       | ChromaDB + PDF Processing   | Converts **PDF regulations into embeddings** for retrieval. |
+| **Web-Based Research**         | Tavily API                  | Fetches **real-time case laws and regulatory guidelines** when needed. |
+
+---
+
+### **5️⃣ User Interface & Deployment**
+
+| **Component**                 | **Technology Used**            | **Description** |
+|--------------------------------|------------------------------|----------------|
+| **User Interface**            | Streamlit                    | Provides an **interactive UI** for users to trigger and monitor complaint processing. |
+| **Backend Processing**        | Python + SQL Server          | Handles **data ingestion, AI processing, and workflow execution**. |
+| **Deployment Type**           | Local + Cloud (Azure)        | SQL Server and some APIs are cloud-hosted, while processing runs **locally or in a VM**. |
+
+---
+
+### **6️⃣ Logging & Monitoring**
+
+| **Component**                 | **Technology Used**           | **Description** |
+|--------------------------------|------------------------------|----------------|
+| **Logging**                   | Python Logging Module        | Logs **workflow execution, errors, and API calls**. |
+| **Error Handling**            | Try/Except Blocks + Logs     | Ensures **graceful error handling** with log reports. |
+
+---
+
+## **🚀 Key Takeaways**
+✅ **Built using Python, LangChain, LangGraph, and SQL Server**  
+✅ **Uses ChromaDB for fast document retrieval**  
+✅ **Leverages Llama 3 for AI-based classification & solution extraction**  
+✅ **Employs Tavily API for real-time web-based regulatory lookup**  
+✅ **Automates complaint & email processing using LangGraph**  
+✅ **Offers an interactive UI via Streamlit**  
+
+---
+
+This documentation provides **a structured overview** of the **Cart 2.0 infrastructure**. 🚀 You can **copy and paste this into your GitHub `README.md`** for easy reference!  
 
 
