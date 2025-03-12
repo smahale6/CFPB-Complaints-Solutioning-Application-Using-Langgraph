@@ -1,4 +1,4 @@
-# Agentic Complaints Solutioning Application using Langgraph
+# Agent based Complaints Solutioning Application using Langgraph
 
 ## Cart 2.0 - Workflows & Class Summary
 
