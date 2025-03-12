@@ -1,8 +1,8 @@
 # Agentic-Complaints-Solutioning-Application-Using-Langgraph
 
-# Cart 2.0 - Workflows & Class Summary
+## Cart 2.0 - Workflows & Class Summary
 
-## 1️⃣ Complaint Workflow Files & Class Summary
+### 1️⃣ Complaint Workflow Files & Class Summary
 
 The **Complaint Workflow** inside the `src/complaint_workflow/` folder handles the full pipeline for **fetching, summarizing, classifying, solving, and grading** consumer complaints using **LangGraph-based workflows**.
 
@@ -20,7 +20,7 @@ The **Complaint Workflow** inside the `src/complaint_workflow/` folder handles t
 
 ---
 
-## 2️⃣ Email Workflow Files & Class Summary
+### 2️⃣ Email Workflow Files & Class Summary
 
 The **Email Workflow** inside the `src/email_workflow/` folder is responsible for **formulating, grading, and refining email responses** to customer complaints.
 
@@ -34,7 +34,7 @@ The **Email Workflow** inside the `src/email_workflow/` folder is responsible fo
 
 ---
 
-## 3️⃣ Core Components & Classes
+### 3️⃣ Core Components & Classes
 
 The **Core Components** provide **database management, logging, regulation ingestion, and the main execution flow**.
 
