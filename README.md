@@ -172,8 +172,6 @@ The **Core Components** handle **database management, logging, regulation ingest
 
 ---
 
-This documentation provides an **organized summary** of all **Cart 2.0 workflows and execution steps**. 🚀 Copy and paste it into your **GitHub `README.md`** file for easy reference!
 
----
 
 
