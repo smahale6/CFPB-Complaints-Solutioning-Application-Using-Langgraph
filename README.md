@@ -18,7 +18,6 @@ The **Complaint Workflow** inside the `src/complaint_workflow/` folder handles t
 | `solution_grading.py`             | `solution_grading_class`             | Grades the generated solutions for accuracy and completeness. |
 | `complaint_stategraph.py`         | `complaint_stategraph_class`         | LangGraph-based state machine for complaint workflow execution. |
 
----
 
 ### 2️⃣ Email Workflow Files & Class Summary
 
@@ -32,7 +31,6 @@ The **Email Workflow** inside the `src/email_workflow/` folder is responsible fo
 | `email_grading.py`   | `email_grading_class`   | Grades generated emails for accuracy, coverage, and clarity. |
 | `email_stategraph.py` | `email_stategraph_class` | LangGraph-based workflow for email formulation and validation. |
 
----
 
 ### 3️⃣ Core Components & Classes
 
@@ -48,13 +46,11 @@ The **Core Components** provide **database management, logging, regulation inges
 | `logger.py`                   | `Logger`                       | Centralized logging to track execution flow and errors. |
 | `regulation_text_ingestion.py` | `regulation_ingestion_class`   | Loads and vectorizes regulation PDFs into ChromaDB for retrieval. |
 
----
 
 ##🚀 Cart 2.0 - Execution Flow Summary
 
 This section provides an overview of how **Cart 2.0** processes complaints and formulates responses using a structured workflow.
 
----
 
 ### 1️⃣ Execution Flow of the Complaint Workflow
 
@@ -99,7 +95,6 @@ The **Complaint Workflow** processes consumer complaints through a **step-by-ste
      - **Retry web-based solution if necessary**.  
      - **End the process if a valid solution is found**.  
 
----
 
 ### 2️⃣ Execution Flow of the Email Workflow
 
@@ -129,7 +124,6 @@ The **Email Workflow** is responsible for **formulating, grading, and refining**
      - **If the email fails**, refine and regenerate **(max 2 attempts)**.  
      - **Approve and finalize** the best version of the email.
 
----
 
 ### 3️⃣ Execution Flow of Core Components
 
@@ -161,7 +155,6 @@ The **Core Components** handle **database management, logging, regulation ingest
    - Finalizes **reviewed complaints and solutions**.  
    - Updates logs and reports.
 
----
 
 ## 🚀 **Cart 2.0 Overview**
 ✅ **CART integrates complaint and email workflows**  
@@ -192,7 +185,6 @@ Cart 2.0 is built using a **modular architecture** integrating various **AI, dat
 | **Search Engine**        | Tavily Search API             | Fetches real-time web information when **regulatory documents are not relevant**. |
 | **Cloud Environment**    | Local + Cloud (Azure)         | SQL Server is **cloud-hosted**; some components run locally. |
 
----
 
 ### **2️⃣ Database & Storage Components**
 
@@ -203,7 +195,6 @@ Cart 2.0 is built using a **modular architecture** integrating various **AI, dat
 | **Document Storage**       | Local/Cloud File System | Stores **PDFs of regulations before ingestion into ChromaDB**. |
 | **Logs Storage**           | Local Log Files (`logs/`) | Stores **execution logs for debugging and monitoring**. |
 
----
 
 ### **3️⃣ Machine Learning & AI Components**
 
@@ -213,7 +204,6 @@ Cart 2.0 is built using a **modular architecture** integrating various **AI, dat
 | **LLM for Text Processing**    | `Llama 3.2 3B (Preview) 8k` via Groq API | Processes complaints, generates responses, and classifies issues. |
 | **LangChain Pipelines**        | LangChain + LangGraph          | Automates workflows for **classification, grading, and email formulation**. |
 
----
 
 ### **4️⃣ Workflow & Automation**
 
@@ -224,7 +214,6 @@ Cart 2.0 is built using a **modular architecture** integrating various **AI, dat
 | **Regulation Ingestion**       | ChromaDB + PDF Processing   | Converts **PDF regulations into embeddings** for retrieval. |
 | **Web-Based Research**         | Tavily API                  | Fetches **real-time case laws and regulatory guidelines** when needed. |
 
----
 
 ### **5️⃣ User Interface & Deployment**
 
@@ -234,7 +223,6 @@ Cart 2.0 is built using a **modular architecture** integrating various **AI, dat
 | **Backend Processing**        | Python + SQL Server          | Handles **data ingestion, AI processing, and workflow execution**. |
 | **Deployment Type**           | Local + Cloud (Azure)        | SQL Server and some APIs are cloud-hosted, while processing runs **locally or in a VM**. |
 
----
 
 ### **6️⃣ Logging & Monitoring**
 
@@ -243,7 +231,6 @@ Cart 2.0 is built using a **modular architecture** integrating various **AI, dat
 | **Logging**                   | Python Logging Module        | Logs **workflow execution, errors, and API calls**. |
 | **Error Handling**            | Try/Except Blocks + Logs     | Ensures **graceful error handling** with log reports. |
 
----
 
 ## **🚀 Key Takeaways**
 ✅ **Built using Python, LangChain, LangGraph, and SQL Server**  
