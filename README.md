@@ -2,32 +2,6 @@
 
 ---
 ---
-## 🚀 Cart 2.0 - Complete Setup & Execution Guide  
-
-This guide provides step-by-step instructions to install, configure, and run **Cart 2.0** for first-time users.
-
----
-
-## **1️⃣ Pre-requisites**  
-
-Before running **Cart 2.0**, ensure you have the following installed:  
-
-✅ **Python 3.9+** (Check using `python --version`)  
-✅ **Git** (Required for cloning the repository)  
-✅ **Groq API Key** → Required for Llama 3 processing ([Sign up here](https://groq.com/))  
-✅ **Tavily API Key** → Required for web-based search ([Get API key](https://tavily.com/))  
-✅ **Hugging Face API Key** → Required for embedding models ([Get API key](https://huggingface.co/settings/tokens))  
-✅ **Microsoft SQL Server** → Required for complaint storage  
-✅ **ODBC Driver for SQL Server** → Download **[ODBC Driver 17](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver15)**  
-
-
-## **2️⃣ Clone the Repository**  
-
-Open a **terminal (Mac/Linux) or command prompt (Windows)** and run:  
-
-```bash
-git clone https://github.com/your-repo/cart-2.0.git
-cd cart-2.0
 
 ##  **3️⃣ Create a Virtual Environment**
 For Windows
