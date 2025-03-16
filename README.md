@@ -2,8 +2,8 @@
 
 ---
 ---
-
-##  **3️⃣ Create a Virtual Environment**
+## Cart 2.0 - Cart Execution Steps
+##  **Create a Virtual Environment**
 For Windows
 python -m venv cart_env
 cart_env\Scripts\activate
@@ -11,19 +11,19 @@ cart_env\Scripts\activate
 For Mac/Linux
 source cart_env/bin/activate
 
-## **4️⃣ Install Dependencies**
+## **Install Dependencies**
 Run the following command to install all required packages:
 pip install -r requirements.txt
 
-## **5️⃣ Set Up API Keys in .env**
+## **Set Up API Keys in .env**
 1. Create a .env file in the cart-2.0 folder:
 2. Open the .env file and add the following:
-**   GROQ_API_KEY=your_groq_api_key_here
+** GROQ_API_KEY=your_groq_api_key_here
    TAVILY_API_KEY=your_tavily_api_key_here
    HUGGINGFACE_API_KEY=your_huggingface_api_key_here
    EMPLOYEE_ID=your_employee_id**
 
-## **6️⃣ Configure SQL Server Connection**
+## **Configure SQL Server Connection**
 Cart 2.0 uses Microsoft SQL Server to store complaints.
 Ensure that:
 
@@ -35,7 +35,7 @@ Your connection credentials are correct
 `driver = '{ODBC Driver 17 for SQL Server}'`
 `conn = pyodbc.connect(f'DRIVER={driver};SERVER={server};DATABASE={database};Trusted_Connection=yes;')`
 
-## **7️⃣ Run Cart 2.0 from CLI**
+## Run Cart 2.0 from CLI**
 Set Argument Values Before Running
 Before executing Cart 2.0, ensure you define the necessary arguments like company name, date range, and total complaints to fetch.
 
