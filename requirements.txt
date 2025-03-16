@@ -1,0 +1,48 @@
+# Core Python Libraries
+numpy
+pandas
+requests
+python-dotenv
+simplejson
+datetime
+
+# Streamlit for UI
+streamlit
+
+# LangChain & LangGraph for AI Workflows
+langchain
+langgraph
+langchain-openai
+langchain-core
+langchain-community
+langchain-groq
+langchain-huggingface
+
+# Vector Database (ChromaDB)
+chromadb
+
+# Hugging Face Embeddings
+huggingface-hub
+sentence-transformers
+
+# SQL Database Handling (MSSQL)
+sqlalchemy
+pyodbc
+
+# LLMs & AI APIs (Groq & OpenAI)
+openai
+groq
+
+# Web Search API (Tavily)
+tavily-python
+
+# Document Processing (PDF)
+pymupdf
+pypdf
+
+# Logging & Monitoring
+logging
+watchdog
+
+# Excel Gymnastics
+xlsxwriter
